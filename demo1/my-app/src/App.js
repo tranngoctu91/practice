@@ -1,25 +1,21 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Feature from "./Feature.js";
 
 function App() {
-  const name = "Start react";
-  function fullName(firstName, lastName) {
-    return `${firstName} - ${lastName}`;
-  }
+  const numbers = [1, 2, 3, 4, 5];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello {fullName("tu", "tran")}</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {numbers.map((s) => (
+        <Feature key={s} title={`title - ${s}`} content={`cotent - ${s}`}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A porro,
+            harum in quidem aliquam architecto quisquam consequuntur, maxime
+            facere itaque ea. Perferendis, consequatur ipsa aliquid ea
+            laudantium maiores at vel.
+          </p>
+        </Feature>
+      ))}
     </div>
   );
 }
