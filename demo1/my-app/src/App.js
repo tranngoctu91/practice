@@ -1,25 +1,16 @@
 import logo from "./logo.svg";
+
 import "./App.css";
+import Toggle from "./Tooggles/Toggle";
+import Counter from "./Counters/Counter";
+import Game from "./Tictactoe/Game";
 
 function App() {
-  const name = "Start react";
-  function fullName(firstName, lastName) {
-    return `${firstName} - ${lastName}`;
-  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello {fullName("tu", "tran")}</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Toggle></Toggle>
+      <Counter></Counter> */}
+      <Game></Game>
     </div>
   );
 }
