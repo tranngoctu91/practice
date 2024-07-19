@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Photos from "./components/photo/Photos";
 
 function App() {
   const name = "Start react";
@@ -8,18 +9,7 @@ function App() {
   }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello {fullName("tu", "tran")}</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Photos></Photos>
     </div>
   );
 }
