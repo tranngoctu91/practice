@@ -1,8 +1,8 @@
+import { useState, useRef, useEffect } from "react";
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
-import lodash from "lodash";
+import { lodash } from "lodash";
 
-const HackerNews = () => {
+export default function useHarkerNewsAPI() {
   const [hits, setHits] = useState([]);
   const [query, setQuery] = useState("react");
   const [loading, setLoading] = useState(true);
@@ -40,24 +40,10 @@ const HackerNews = () => {
     setQuery(e.target.value);
   }, 500);
 
-  return (
-    <div>
-      <div>
-        <input
-          id="txt-query"
-          type="text"
-          defaultValue={query}
-          //   onChange={handleSetValue}
-        />
-        <button id="btn-fetch">Fetch</button>
-      </div>
-
-      <div>{loading && <p>Loading...</p>}</div>
-      {!loading && errorMessage && <p>{errorMessage}</p>}
-
-      <div>{!loading && hits.map((s, i) => <p key={i}>{s.title}</p>)}</div>
-    </div>
-  );
-};
-
-export default HackerNews;
+  return {
+    loading,
+    hits,
+    errorMessage,
+    query,
+  };
+}
