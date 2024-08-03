@@ -15,6 +15,7 @@ import MovieSearchApp from "./components/movies/MovieSearchApp";
 import SignUpForm from "./components/forms/formik/SignUpForm";
 import SignUpFormYup from "./components/forms/formik/SignUpFormYup";
 import SignUpFormYupV2 from "./components/forms/formik/SignUpFormYupV2";
+import SignUpFormRhf from "./components/forms/RHF/SignUpFormRhf";
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
       {/* <MovieSearchApp></MovieSearchApp> */}
       {/* <SignUpForm></SignUpForm> */}
       {/* <SignUpFormYup></SignUpFormYup> */}
-      <SignUpFormYupV2></SignUpFormYupV2>
+      {/* <SignUpFormYupV2></SignUpFormYupV2> */}
+      <SignUpFormRhf></SignUpFormRhf>
     </div>
   );
 }
